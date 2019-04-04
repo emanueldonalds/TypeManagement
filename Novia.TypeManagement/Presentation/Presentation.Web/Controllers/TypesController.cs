@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Novia.TypeManagement.Application.Abstractions;
@@ -30,25 +31,34 @@ namespace Novia.TypeManagement.Presentation.Web.Controllers
 
         // GET: api/Types/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public ActionResult<TypeDto> Get(int id)
         {
-            return "value";
+            var theType = mTypeManagement.FindById(id);
+            if(theType != null)
+            {
+                return theType;
+            }
+
+            return null;
         }
 
         // POST: api/Types
         [HttpPost]
+        [Authorize]
         public void Post([FromBody] string value)
         {
         }
 
         // PUT: api/Types/5
         [HttpPut("{id}")]
+        [Authorize]
         public void Put(int id, [FromBody] string value)
         {
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
+        [Authorize]
         public void Delete(int id)
         {
         }

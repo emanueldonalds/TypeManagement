@@ -35,3 +35,8 @@ body {
         display: none;
     }
 }
+
+/* Make horizantal lists nicer */
+dt {
+    text-align: left!important;
+}

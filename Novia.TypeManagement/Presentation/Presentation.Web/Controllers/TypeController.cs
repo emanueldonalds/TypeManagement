@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Novia.TypeManagement.Application.Abstractions;
@@ -33,6 +34,7 @@ namespace Novia.TypeManagement.Presentation.Web.Controllers
         }
 
         // GET: Type/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -41,6 +43,7 @@ namespace Novia.TypeManagement.Presentation.Web.Controllers
         // POST: Type/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public IActionResult Create(TypeDto newTypeDto)
         {
             try
@@ -60,6 +63,7 @@ namespace Novia.TypeManagement.Presentation.Web.Controllers
         }
 
         // GET: Type/Edit/5
+        [Authorize]
         public ActionResult Edit(int id)
         {
             TypeDto theTypeDto = mTypeManagement.FindById(id);
@@ -69,6 +73,7 @@ namespace Novia.TypeManagement.Presentation.Web.Controllers
         // POST: Type/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit(TypeDto theTypeToEditDto)
         {
             try
@@ -83,6 +88,7 @@ namespace Novia.TypeManagement.Presentation.Web.Controllers
         }
 
         // GET: Type/Delete/5
+        [Authorize]
         public ActionResult Delete(int id)
         {
             TypeDto theTypeDto = mTypeManagement.FindById(id);
@@ -92,6 +98,7 @@ namespace Novia.TypeManagement.Presentation.Web.Controllers
         // POST: Type/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Delete(TypeDto theTypeToDeleteDto)
         {
             try
