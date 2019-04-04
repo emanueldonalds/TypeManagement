@@ -1,4 +1,5 @@
-﻿using Novia.TypeManagement.Domain.Abstractions;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Novia.TypeManagement.Domain.Abstractions;
 using Novia.TypeManagement.Domain.Entities;
 using System;
 
@@ -12,13 +13,15 @@ namespace Novia.TypeManagement.Presentation.Console
         {
             Console.WriteLine("Hello World!");
 
-            IEntity theEntity = new Type();
+            // Dependency injection
+            var serviceCollection = new ServiceCollection();
 
-            Entity otherEntity = new Type();
+            var bootStrapper = new Startup();
+            bootStrapper.ConfigureServices(serviceCollection);
 
-            Console.Write("The transient value of the entity: ");
+            var serviceProvider = serviceCollection.BuildServiceProvider();
 
-            Console.WriteLine(otherEntity.IsTransient().ToString());
+            IType type = serviceProvider.GetService<IType>();
 
             Console.ReadKey();
         }
