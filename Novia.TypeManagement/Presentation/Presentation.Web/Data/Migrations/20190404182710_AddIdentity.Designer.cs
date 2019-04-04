@@ -10,7 +10,7 @@ using Novia.TypeManagement.Presentation.Web.Data;
 namespace Novia.TypeManagement.Presentation.Web.Data.Migrations
 {
     [DbContext(typeof(TypeIdentityDbContext))]
-    [Migration("20190404171459_AddIdentity")]
+    [Migration("20190404182710_AddIdentity")]
     partial class AddIdentity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
