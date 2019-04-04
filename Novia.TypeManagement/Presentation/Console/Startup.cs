@@ -1,7 +1,11 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Novia.TypeManagement.Domain.Abstractions;
+using Novia.TypeManagement.Infrastructure.Data.Ef;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Novia.TypeManagement.Presentation.Console
@@ -12,6 +16,11 @@ namespace Novia.TypeManagement.Presentation.Console
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
             services
                 .AddTransient<IType, Type>((context) =>
                 {
