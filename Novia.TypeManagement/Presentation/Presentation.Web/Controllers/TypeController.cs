@@ -28,7 +28,8 @@ namespace Novia.TypeManagement.Presentation.Web.Controllers
         // GET: Type/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var theType = mTypeManagement.FindById(id);
+            return View(theType);
         }
 
         // GET: Type/Create
