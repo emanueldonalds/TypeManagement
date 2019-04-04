@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Novia.TypeManagement.Domain.Entities
 {
-    class Type : Entity
+    public class Type : Entity
     {
         public string Name { get; set; }
         public int Volume { get; set; }

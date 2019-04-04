@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novia.TypeManagement.Domain", "Domain\Domain\Novia.TypeManagement.Domain.csproj", "{8A265551-7906-41D6-B2CD-3FA16C40E774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novia.TypeManagement.Presentation.Console", "Novia.TypeManagement.Presentation.Console\Novia.TypeManagement.Presentation.Console.csproj", "{4D0203CF-E785-41A2-90A9-121235A2131C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novia.TypeManagement.Presentation.Console", "Presentation\Console\Novia.TypeManagement.Presentation.Console.csproj", "{5B2FE376-B7C6-43BE-A0D3-1E275F5C93D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{8A265551-7906-41D6-B2CD-3FA16C40E774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A265551-7906-41D6-B2CD-3FA16C40E774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A265551-7906-41D6-B2CD-3FA16C40E774}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D0203CF-E785-41A2-90A9-121235A2131C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D0203CF-E785-41A2-90A9-121235A2131C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D0203CF-E785-41A2-90A9-121235A2131C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D0203CF-E785-41A2-90A9-121235A2131C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B2FE376-B7C6-43BE-A0D3-1E275F5C93D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B2FE376-B7C6-43BE-A0D3-1E275F5C93D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B2FE376-B7C6-43BE-A0D3-1E275F5C93D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B2FE376-B7C6-43BE-A0D3-1E275F5C93D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
