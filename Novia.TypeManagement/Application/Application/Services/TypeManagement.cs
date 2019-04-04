@@ -21,7 +21,7 @@ namespace Novia.TypeManagement.Application.Services
 
         public TypeDto Add(string name, int volume, int power, double price)
         {
-            Type newType = Type.CreateType(name, volume, power, price);
+            IType newType = Type.CreateType(name, volume, power, price);
             mTypeRepository.Add(newType);
 
             TypeDto newTypeDto = new TypeDto
@@ -55,7 +55,7 @@ namespace Novia.TypeManagement.Application.Services
 
         public bool Modify(TypeDto theType)
         {
-            Type theTypeToModify = mTypeRepository.GetById(theType.Id);
+            IType theTypeToModify = mTypeRepository.GetById(theType.Id);
 
             if (theTypeToModify != null)
             {
@@ -73,7 +73,7 @@ namespace Novia.TypeManagement.Application.Services
 
         public bool Remove(TypeDto theType)
         {
-            Type theTypeToDelete = mTypeRepository.GetById(theType.Id);
+            IType theTypeToDelete = mTypeRepository.GetById(theType.Id);
 
             if(theTypeToDelete != null)
             {
@@ -86,7 +86,7 @@ namespace Novia.TypeManagement.Application.Services
 
         public TypeDto FindById(int Id)
         {
-            Type theType = mTypeRepository.GetById(Id);
+            IType theType = mTypeRepository.GetById(Id);
 
             if(theType != null)
             {

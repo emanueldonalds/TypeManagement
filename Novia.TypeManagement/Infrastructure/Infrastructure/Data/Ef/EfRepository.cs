@@ -9,67 +9,60 @@ using System.Text;
 namespace Novia.TypeManagement.Infrastructure.Data.Ef
 {
     /// <summary>
-    /// "There's some repetition here - couldn't we have some the sync methods call the async?"
-    /// https://blogs.msdn.microsoft.com/pfxteam/2012/04/13/should-i-expose-synchronouswrappers-for-asynchronous-methods/
+    /// This EFrepository uses the EF DBContext to do the real work and implements the IRepository interface
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class EfRepository<TDbContext, TEntity> : IRepository<TEntity>
-        where TEntity : Entity
-        where TDbContext : EfDbContext
+    public class EfRepository<TDbContext, TEntity, TIEntity> : IRepository<TIEntity>
+    where TIEntity : IEntity<int>
+    where TEntity : Entity, TIEntity
+    where TDbContext : EfDbContext
     {
         protected readonly TDbContext mDbContext;
-
         public EfRepository(TDbContext dbContext)
         {
             mDbContext = dbContext;
         }
-
-        public virtual TEntity GetById(int id)
+        public virtual TIEntity GetById(int id)
         {
             return mDbContext.Set<TEntity>().Find(id);
         }
-
-        public TEntity GetSingleBySpec(ISpecification<TEntity> spec)
+        public TIEntity GetSingleBySpec(ISpecification<TIEntity> spec)
         {
             return List(spec).FirstOrDefault();
         }
-
-        public IEnumerable<TEntity> ListAll()
+        public IEnumerable<TIEntity> ListAll()
         {
             return mDbContext.Set<TEntity>().AsEnumerable();
         }
-        public IEnumerable<TEntity> List(ISpecification<TEntity> spec)
+        public IEnumerable<TIEntity> List(ISpecification<TIEntity> spec)
         {
+            ISpecification<TEntity> specification = spec as ISpecification<TEntity>;
             // fetch a Queryable that includes all expression-based includes
-            var queryableResultWithIncludes = spec.Includes
-                .Aggregate(mDbContext.Set<TEntity>().AsQueryable(),
-                    (current, include) => current.Include(include));
-
+            var queryableResultWithIncludes = specification.Includes
+            .Aggregate(mDbContext.Set<TEntity>().AsQueryable(),
+            (current, include) => current.Include(include));
             // modify the IQueryable to include any string-based include statements
-            var secondaryResult = spec.IncludeStrings
-                .Aggregate(queryableResultWithIncludes,
-                    (current, include) => current.Include(include));
-
+            var secondaryResult = specification.IncludeStrings
+            .Aggregate(queryableResultWithIncludes,
+            (current, include) => current.Include(include));
             // return the result of the query using the specification's criteria expression
             return secondaryResult
-                    .Where(spec.Criteria)
-                        .AsEnumerable();
+            .Where(specification.Criteria)
+            .AsEnumerable();
         }
-        public TEntity Add(TEntity entity)
+        public TIEntity Add(TIEntity entity)
         {
-            mDbContext.Set<TEntity>().Add(entity);
+            mDbContext.Set<TEntity>().Add(entity as TEntity);
             mDbContext.SaveChanges();
             return entity;
         }
-        public void Update(TEntity entity)
+        public void Update(TIEntity entity)
         {
-            mDbContext.Entry(entity).State = EntityState.Modified;
+            mDbContext.Entry(entity as TEntity).State = EntityState.Modified;
             mDbContext.SaveChanges();
         }
-
-        public void Delete(TEntity entity)
+        public void Delete(TIEntity entity)
         {
-            mDbContext.Set<TEntity>().Remove(entity);
+            mDbContext.Set<TEntity>().Remove(entity as TEntity);
             mDbContext.SaveChanges();
         }
     }
