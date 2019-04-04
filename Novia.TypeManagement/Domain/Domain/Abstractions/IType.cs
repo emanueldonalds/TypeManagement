@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Novia.TypeManagement.Domain.Abstractions
 {
-    public interface IType : IEntity<int>
+    public interface IType : IAggregateRoot<int>
     {
         string Name { get; set; }
         int Volume { get; set; }
