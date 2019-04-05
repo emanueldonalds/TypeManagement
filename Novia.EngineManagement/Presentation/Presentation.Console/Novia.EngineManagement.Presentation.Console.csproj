@@ -15,9 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Configuration\Configuration\Novia.TypeManagement.Configuration.csproj" />
-    <ProjectReference Include="..\..\Domain\Domain\Novia.TypeManagement.Domain.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\Infrastructure\Novia.TypeManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Configuration\Configuration\Novia.EngineManagement.Configuration.csproj" />
+    <ProjectReference Include="..\..\Domain\Domain\Novia.EngineManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure\Novia.EngineManagement.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

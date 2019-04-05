@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\Application.Abstractions\Novia.EngineManagement.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Application\Application\Novia.EngineManagement.Application.csproj" />
+    <ProjectReference Include="..\..\Domain\Domain\Novia.EngineManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure\Novia.EngineManagement.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
