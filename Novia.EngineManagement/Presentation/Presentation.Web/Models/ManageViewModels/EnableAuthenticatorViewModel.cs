@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace Novia.TypeManagement.Presentation.Web.Models.ManageViewModels
+namespace Novia.EngineManagement.Presentation.Web.Models.ManageViewModels
 {
     public class EnableAuthenticatorViewModel
     {

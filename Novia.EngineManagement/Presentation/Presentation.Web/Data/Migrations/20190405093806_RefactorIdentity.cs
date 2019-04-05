@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Novia.TypeManagement.Presentation.Web.Data.Migrations
+namespace Novia.EngineManagement.Presentation.Web.Data.Migrations
 {
-    public partial class AddIdentity : Migration
+    public partial class RefactorIdentity : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

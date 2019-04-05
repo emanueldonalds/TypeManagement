@@ -10,17 +10,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Type.TypeManagement.Presentation.Web
+namespace Novia.EngineManagement.Presentation.Web
 {
-    using Type = Novia.TypeManagement.Domain.Entities.Type;
 
-    using System.Globalization;
-    using Microsoft.AspNetCore.Localization;
     using Microsoft.AspNetCore.Mvc.Razor;
-    using Novia.TypeManagement.Presentation.Web.Data;
-    using Novia.TypeManagement.Presentation.Web.Models;
-    using Novia.TypeManagement.Presentation.Web.Services;
-    using Novia.TypeManagement.Configuration;
+    using Novia.EngineManagement.Presentation.Web.Data;
+    using Novia.EngineManagement.Presentation.Web.Models;
+    using Novia.EngineManagement.Presentation.Web.Services;
+    using Novia.EngineManagement.Configuration;
 
     public class Startup
     {
@@ -34,11 +31,11 @@ namespace Type.TypeManagement.Presentation.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<TypeIdentityDbContext>(options =>
+            services.AddDbContext<EngineIdentityDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<TypeIdentityDbContext>()
+                .AddEntityFrameworkStores<EngineIdentityDbContext>()
                 .AddDefaultTokenProviders();
 
             // Add application services.

@@ -1,6 +1,6 @@
 using System;
 
-namespace Novia.TypeManagement.Presentation.Web.Models
+namespace Novia.EngineManagement.Presentation.Web.Models
 {
     public class ErrorViewModel
     {

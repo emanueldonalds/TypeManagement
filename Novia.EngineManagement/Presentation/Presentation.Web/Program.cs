@@ -8,12 +8,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Novia.TypeManagement.Configuration;
-using Novia.TypeManagement.Presentation.Web.Data;
-using Novia.TypeManagement.Presentation.Web.Models;
-using Type.TypeManagement.Presentation.Web;
+using Novia.EngineManagement.Configuration;
+using Novia.EngineManagement.Presentation.Web.Data;
+using Novia.EngineManagement.Presentation.Web.Models;
 
-namespace Novia.TypeManagement.Presentation.Web
+namespace Novia.EngineManagement.Presentation.Web
 {
     public class Program
     {
@@ -29,10 +28,10 @@ namespace Novia.TypeManagement.Presentation.Web
                     // This seeds the domain databse
                     StorageConfigurator.SeedDatabase(services);
                     // This seeds the Identity database
-                    var context = services.GetRequiredService<TypeIdentityDbContext>();
+                    var context = services.GetRequiredService<EngineIdentityDbContext>();
                     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-                    TypeIdentityDbContextSeeder.SeedAsync(context, userManager, roleManager).Wait();
+                    EngineIdentityDbContextSeeder.SeedAsync(context, userManager, roleManager).Wait();
                 }
                 catch (Exception ex)
                 {

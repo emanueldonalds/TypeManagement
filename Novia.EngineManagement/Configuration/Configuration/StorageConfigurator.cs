@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Novia.TypeManagement.Infrastructure.Data.Ef;
-namespace Novia.TypeManagement.Configuration
+using Novia.EngineManagement.Infrastructure.Data.Ef;
+namespace Novia.EngineManagement.Configuration
 {
     public static class StorageConfigurator
     {
@@ -15,8 +15,8 @@ namespace Novia.TypeManagement.Configuration
         {
             try
             {
-                var context = services.GetRequiredService<TypeDbContext>();
-                TypeDbContextSeeder.SeedAsync(context);
+                var context = services.GetRequiredService<EngineDbContext>();
+                EngineDbContextSeeder.SeedAsync(context);
             }
             catch (Exception ex)
             {

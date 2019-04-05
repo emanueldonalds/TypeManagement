@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Novia.TypeManagement.Domain.Abstractions
+namespace Novia.EngineManagement.Domain.Abstractions
 {
     // <summary>
     /// Represents that the implemented classes are aggregate roots, a marker.
@@ -14,7 +14,7 @@ namespace Novia.TypeManagement.Domain.Abstractions
     /// <summary>
     /// Represents that the implemented classes are aggregate roots, a marker.
     /// </summary>
-    /// <typeparam name="TKey">The type of the aggregate root key.</typeparam>
+    /// <Typeparam name="TKey">The Engine of the aggregate root key.</Typeparam>
     public interface IAggregateRoot<TKey> : IEntity<TKey>, IAggregateRoot
     where TKey : IEquatable<TKey>
     {

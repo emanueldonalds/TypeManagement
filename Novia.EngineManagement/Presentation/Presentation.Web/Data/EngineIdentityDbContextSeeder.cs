@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Novia.TypeManagement.Presentation.Web.Models;
+using Novia.EngineManagement.Presentation.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Novia.TypeManagement.Presentation.Web.Data
+namespace Novia.EngineManagement.Presentation.Web.Data
 {
-    public static class TypeIdentityDbContextSeeder
+    public static class EngineIdentityDbContextSeeder
     {
-        public static async Task SeedAsync(TypeIdentityDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public static async Task SeedAsync(EngineIdentityDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             // Use the Migrate method to automatically create the database and migrat if needed
             context.Database.EnsureCreated();

@@ -1,14 +1,13 @@
-﻿@model Novia.TypeManagement.Application.Abstractions.Dtos.TypeDto
+﻿@model Novia.EngineManagement.Application.Abstractions.Dtos.EngineDto
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Details";
 }
 
-<h2>Delete</h2>
+<h2>Details</h2>
 
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>TypeDto</h4>
+    <h4>EngineDto</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -36,9 +35,8 @@
             @Html.DisplayFor(model => model.Price)
         </dd>
     </dl>
-    
-    <form asp-action="Delete">
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    <a asp-action="Index">Back to List</a>
 </div>

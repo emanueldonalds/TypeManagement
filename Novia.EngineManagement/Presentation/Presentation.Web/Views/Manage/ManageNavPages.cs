@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
-namespace Novia.TypeManagement.Presentation.Web.Views.Manage
+namespace Novia.EngineManagement.Presentation.Web.Views.Manage
 {
     public static class ManageNavPages
     {

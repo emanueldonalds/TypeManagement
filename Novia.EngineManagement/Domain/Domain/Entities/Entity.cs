@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Novia.TypeManagement.Domain.Abstractions;
+using Novia.EngineManagement.Domain.Abstractions;
 
-namespace Novia.TypeManagement.Domain.Entities
+namespace Novia.EngineManagement.Domain.Entities
 {
     /// <summary>
     /// Entity base class (Handles equality and identity)
     /// </summary>
-    /// <typeparam name="TKey">The type of the key of the entity.</typeparam>
+    /// <Typeparam name="TKey">The Type of the key of the entity.</Typeparam>
     public abstract class Entity<TKey> : IEquatable<Entity<TKey>>, IEntity<TKey>
      where TKey : struct, IEquatable<TKey>
     {
@@ -31,7 +31,7 @@ namespace Novia.TypeManagement.Domain.Entities
             return Equals(Id, default(TKey));
         }
         /// <summary>
-        /// Indicates whether the current object is equal to another object of the same type.
+        /// Indicates whether the current object is equal to another object of the same Engine.
         /// </summary>
         /// <returns>
         /// true if the current object is equal to the <paramref name="other"/> parameter;
@@ -81,8 +81,8 @@ namespace Novia.TypeManagement.Domain.Entities
             return !(x == y);
         }
     }
-    // Using non-generic integer types for simplicity and to ease caching logic
+    // Using non-generic integer Engines for simplicity and to ease caching logic
     public abstract class Entity : Entity<int>
     {
     }
-}
+}

@@ -1,4 +1,4 @@
-﻿@using Novia.TypeManagement.Presentation.Web.Views.Manage
+﻿@using Novia.EngineManagement.Presentation.Web.Views.Manage
 @inject SignInManager<ApplicationUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();

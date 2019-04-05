@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Novia.TypeManagement.Presentation.Web.Data;
+using Novia.EngineManagement.Presentation.Web.Data;
 
-namespace Novia.TypeManagement.Presentation.Web.Data.Migrations
+namespace Novia.EngineManagement.Presentation.Web.Data.Migrations
 {
-    [DbContext(typeof(TypeIdentityDbContext))]
-    [Migration("20190404182710_AddIdentity")]
-    partial class AddIdentity
+    [DbContext(typeof(EngineIdentityDbContext))]
+    [Migration("20190405093806_RefactorIdentity")]
+    partial class RefactorIdentity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -131,7 +131,7 @@ namespace Novia.TypeManagement.Presentation.Web.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Novia.TypeManagement.Presentation.Web.Models.ApplicationUser", b =>
+            modelBuilder.Entity("Novia.EngineManagement.Presentation.Web.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
@@ -192,7 +192,7 @@ namespace Novia.TypeManagement.Presentation.Web.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Novia.TypeManagement.Presentation.Web.Models.ApplicationUser")
+                    b.HasOne("Novia.EngineManagement.Presentation.Web.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -200,7 +200,7 @@ namespace Novia.TypeManagement.Presentation.Web.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Novia.TypeManagement.Presentation.Web.Models.ApplicationUser")
+                    b.HasOne("Novia.EngineManagement.Presentation.Web.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -213,7 +213,7 @@ namespace Novia.TypeManagement.Presentation.Web.Data.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Novia.TypeManagement.Presentation.Web.Models.ApplicationUser")
+                    b.HasOne("Novia.EngineManagement.Presentation.Web.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -221,7 +221,7 @@ namespace Novia.TypeManagement.Presentation.Web.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Novia.TypeManagement.Presentation.Web.Models.ApplicationUser")
+                    b.HasOne("Novia.EngineManagement.Presentation.Web.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

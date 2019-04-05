@@ -2,37 +2,37 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Novia.TypeManagement.Domain.Abstractions;
-using Novia.TypeManagement.Domain.Entities;
+using Novia.EngineManagement.Domain.Abstractions;
+using Novia.EngineManagement.Domain.Entities;
 
-namespace Novia.TypeManagement.Infrastructure.Data.Ef
+namespace Novia.EngineManagement.Infrastructure.Data.Ef
 {
-    using Type = Domain.Entities.Type;
-    public static class TypeDbContextSeeder
+    using Engine = Domain.Entities.Engine;
+    public static class EngineDbContextSeeder
     {
 
-        public static int SeedAsync(TypeDbContext context)
+        public static int SeedAsync(EngineDbContext context)
         {
             // Use the Migrate method to automatically create the database and migrat if needed
             context.Database.EnsureCreated();
-            if (context.Types.Count() == 0)
+            if (context.Engines.Count() == 0)
             {
                 // we could also check for some specific instances and behave accordingly to the result.
-                Type firstType = new Type
+                Engine firstEngine = new Engine
                 {
                     Name = "Honda CR60",
                     Power = 210,
                     Volume = 1800,
                     Price = 8544,
                 };
-                Type SecondType = new Type
+                Engine SecondEngine = new Engine
                 {
                     Name = "Nissan XR22",
                     Power = 340,
                     Volume = 2200,
                     Price = 11999,
                 };
-                Type thirdType = new Type
+                Engine thirdEngine = new Engine
                 {
                     Name = "Lamborghini ABCDEFGH",
                     Power = 550,
@@ -40,9 +40,9 @@ namespace Novia.TypeManagement.Infrastructure.Data.Ef
                     Price = 34000,
                 };
 
-                context.Types.Add(firstType);
-                context.Types.Add(SecondType);
-                context.Types.Add(thirdType);
+                context.Engines.Add(firstEngine);
+                context.Engines.Add(SecondEngine);
+                context.Engines.Add(thirdEngine);
 
                 return context.SaveChanges();
             }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Novia.TypeManagement.Domain.Abstractions
+namespace Novia.EngineManagement.Domain.Abstractions
 {
-    public interface IType : IAggregateRoot<int>
+    public interface IEngine : IAggregateRoot<int>
     {
         string Name { get; set; }
         int Volume { get; set; }

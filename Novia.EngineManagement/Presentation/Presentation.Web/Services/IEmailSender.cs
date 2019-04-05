@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Novia.TypeManagement.Presentation.Web.Services
+namespace Novia.EngineManagement.Presentation.Web.Services
 {
     public interface IEmailSender
     {

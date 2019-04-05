@@ -10,11 +10,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Novia.TypeManagement.Presentation.Web.Models;
-using Novia.TypeManagement.Presentation.Web.Models.AccountViewModels;
-using Novia.TypeManagement.Presentation.Web.Services;
+using Novia.EngineManagement.Presentation.Web.Models;
+using Novia.EngineManagement.Presentation.Web.Models.AccountViewModels;
+using Novia.EngineManagement.Presentation.Web.Services;
 
-namespace Novia.TypeManagement.Presentation.Web.Controllers
+namespace Novia.EngineManagement.Presentation.Web.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]

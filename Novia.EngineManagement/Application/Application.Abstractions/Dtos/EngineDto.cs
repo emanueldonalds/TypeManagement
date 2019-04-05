@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Novia.TypeManagement.Application.Abstractions.Dtos
+namespace Novia.EngineManagement.Application.Abstractions.Dtos
 {
-    public class TypeDto
+    public class EngineDto
     {
         public int Id { get; set; }
         public string Name { get; set; }

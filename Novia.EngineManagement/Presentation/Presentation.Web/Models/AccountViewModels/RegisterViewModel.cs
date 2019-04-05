@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Novia.TypeManagement.Presentation.Web.Models.AccountViewModels
+namespace Novia.EngineManagement.Presentation.Web.Models.AccountViewModels
 {
     public class RegisterViewModel
     {

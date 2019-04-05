@@ -1,14 +1,15 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Novia.TypeManagement.Configuration;
+using Novia.EngineManagement.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using System.Text;
 
-namespace Novia.TypeManagement.Presentation.Console
+
+namespace Novia.EngineManagement.Presentation.Console
 {
-    using Type = Novia.TypeManagement.Domain.Entities.Type;
+    using Engine = Novia.EngineManagement.Domain.Entities.Engine;
 
     public class Startup
     {

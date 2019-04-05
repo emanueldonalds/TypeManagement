@@ -6,25 +6,25 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Novia.TypeManagement.Infrastructure.Data.Ef
+namespace Novia.EngineManagement.Infrastructure.Data.Ef
 {
-    public class DesignTimeTypeDbContextFactory :
-    IDesignTimeDbContextFactory<TypeDbContext>
+    public class DesignTimeEngineDbContextFactory :
+    IDesignTimeDbContextFactory<EngineDbContext>
     {
-        public TypeDbContext CreateDbContext(string[] args)
+        public EngineDbContext CreateDbContext(string[] args)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            var builder = new DbContextOptionsBuilder<TypeDbContext>();
+            var builder = new DbContextOptionsBuilder<EngineDbContext>();
 
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             builder.UseSqlServer(connectionString);
 
-            return new TypeDbContext(builder.Options);
+            return new EngineDbContext(builder.Options);
         }
     }
 }

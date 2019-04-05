@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Novia.TypeManagement.Domain.Abstractions;
-using Novia.TypeManagement.Domain.Entities;
+using Novia.EngineManagement.Domain.Abstractions;
+using Novia.EngineManagement.Domain.Entities;
 using System;
 
-namespace Novia.TypeManagement.Presentation.Console
+namespace Novia.EngineManagement.Presentation.Console
 {
     using Console = System.Console;
-    using Type = Novia.TypeManagement.Domain.Entities.Type;
+    using Engine = Novia.EngineManagement.Domain.Entities.Engine;
     class Program
     {
         static void Main(string[] args)
@@ -21,7 +21,7 @@ namespace Novia.TypeManagement.Presentation.Console
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
-            IType type = serviceProvider.GetService<IType>();
+            IEngine Engine = serviceProvider.GetService<IEngine>();
 
             Console.ReadKey();
         }

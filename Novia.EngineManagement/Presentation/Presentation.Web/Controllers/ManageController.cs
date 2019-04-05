@@ -10,11 +10,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Novia.TypeManagement.Presentation.Web.Models;
-using Novia.TypeManagement.Presentation.Web.Models.ManageViewModels;
-using Novia.TypeManagement.Presentation.Web.Services;
+using Novia.EngineManagement.Presentation.Web.Models;
+using Novia.EngineManagement.Presentation.Web.Models.ManageViewModels;
+using Novia.EngineManagement.Presentation.Web.Services;
 
-namespace Novia.TypeManagement.Presentation.Web.Controllers
+namespace Novia.EngineManagement.Presentation.Web.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]
@@ -522,7 +522,7 @@ namespace Novia.TypeManagement.Presentation.Web.Controllers
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("Novia.TypeManagement.Presentation.Web"),
+                _urlEncoder.Encode("Novia.EngineManagement.Presentation.Web"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

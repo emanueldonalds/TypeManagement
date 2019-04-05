@@ -2,25 +2,23 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Novia.TypeManagement.Infrastructure.Data.Ef;
+using Novia.EngineManagement.Infrastructure.Data.Ef;
 
-namespace Novia.TypeManagement.Infrastructure.Data.Ef.Migrations
+namespace Novia.EngineManagement.Infrastructure.Data.Ef.Migrations
 {
-    [DbContext(typeof(TypeDbContext))]
-    [Migration("20190404121814_Initial")]
-    partial class Initial
+    [DbContext(typeof(EngineDbContext))]
+    partial class EngineDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.3-servicing-35854")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Novia.TypeManagement.Domain.Entities.Type", b =>
+            modelBuilder.Entity("Novia.EngineManagement.Domain.Entities.Engine", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,7 +34,7 @@ namespace Novia.TypeManagement.Infrastructure.Data.Ef.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Types");
+                    b.ToTable("Engines");
                 });
 #pragma warning restore 612, 618
         }

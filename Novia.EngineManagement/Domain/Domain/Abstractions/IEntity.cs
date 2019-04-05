@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-namespace Novia.TypeManagement.Domain.Abstractions
+namespace Novia.EngineManagement.Domain.Abstractions
 {
     /// <summary>
     /// Marker interface to mark a entity
@@ -14,7 +14,7 @@ namespace Novia.TypeManagement.Domain.Abstractions
     /// Marker interface to mark a entity
     /// Represents that the implemented classes are domain entities.
     /// </summary>
-    /// <typeparam name="TKey">The type of the entity key.</typeparam>
+    /// <Typeparam name="TKey">The Type of the entity key.</Typeparam>
     public interface IEntity<TKey> : IEntity
     where TKey : IEquatable<TKey>
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace Novia.TypeManagement.Presentation.Web.Models.ManageViewModels
+namespace Novia.EngineManagement.Presentation.Web.Models.ManageViewModels
 {
     public class ExternalLoginsViewModel
     {

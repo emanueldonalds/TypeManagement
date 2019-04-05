@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Novia.TypeManagement.Domain.Abstractions;
-using Novia.TypeManagement.Domain.Entities;
+using Novia.EngineManagement.Domain.Abstractions;
+using Novia.EngineManagement.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Novia.TypeManagement.Infrastructure.Data.Ef
+namespace Novia.EngineManagement.Infrastructure.Data.Ef
 {
     /// <summary>
     /// This EFrepository uses the EF DBContext to do the real work and implements the IRepository interface

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Novia.TypeManagement.Infrastructure.Data.Ef
+namespace Novia.EngineManagement.Infrastructure.Data.Ef
 {
 
     public abstract class EfDbContext : DbContext, IDbContext

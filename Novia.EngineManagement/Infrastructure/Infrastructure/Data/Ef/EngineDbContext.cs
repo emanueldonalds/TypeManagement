@@ -1,24 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Novia.TypeManagement.Domain.Entities;
+using Novia.EngineManagement.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Novia.TypeManagement.Infrastructure.Data.Ef
+namespace Novia.EngineManagement.Infrastructure.Data.Ef
 {
-    using Type = Novia.TypeManagement.Domain.Entities.Type;
-    public class TypeDbContext : EfTypeDbContext
+    using Engine = Novia.EngineManagement.Domain.Entities.Engine;
+    public class EngineDbContext : EfEngineDbContext
     {
-        public TypeDbContext(DbContextOptions<TypeDbContext> options)
+        public EngineDbContext(DbContextOptions<EngineDbContext> options)
             : base(options)
         {
 
         }
-        public override DbSet<Type> Types { get; set; }
+        public override DbSet<Engine> Engines { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Type>();
+            modelBuilder.Entity<Engine>();
         }
 
         public override int SaveChanges()

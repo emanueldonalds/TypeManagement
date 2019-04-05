@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Novia.TypeManagement.Presentation.Web.Models;
+using Novia.EngineManagement.Presentation.Web.Models;
 
-namespace Novia.TypeManagement.Presentation.Web.Controllers
+namespace Novia.EngineManagement.Presentation.Web.Controllers
 {
     public class HomeController : Controller
     {

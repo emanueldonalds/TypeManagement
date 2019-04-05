@@ -4,13 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Novia.TypeManagement.Presentation.Web.Models;
+using Novia.EngineManagement.Presentation.Web.Models;
 
-namespace Novia.TypeManagement.Presentation.Web.Data
+namespace Novia.EngineManagement.Presentation.Web.Data
 {
-    public class TypeIdentityDbContext : IdentityDbContext<ApplicationUser>
+    public class EngineIdentityDbContext : IdentityDbContext<ApplicationUser>
     {
-        public TypeIdentityDbContext(DbContextOptions<TypeIdentityDbContext> options)
+        public EngineIdentityDbContext(DbContextOptions<EngineIdentityDbContext> options)
             : base(options)
         {
         }

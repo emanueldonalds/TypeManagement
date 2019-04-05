@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using Novia.TypeManagement.Presentation.Web.Services;
+using Novia.EngineManagement.Presentation.Web.Services;
 
-namespace Novia.TypeManagement.Presentation.Web.Services
+namespace Novia.EngineManagement.Presentation.Web.Services
 {
     public static class EmailSenderExtensions
     {

@@ -1,18 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Novia.TypeManagement.Application;
-using Novia.TypeManagement.Application.Abstractions;
-using Novia.TypeManagement.Domain.Abstractions;
-using Novia.TypeManagement.Infrastructure.Data.Ef;
-using Novia.TypeManagement.Infrastructure.Data.Ef.Repositories;
+using Novia.EngineManagement.Application;
+using Novia.EngineManagement.Application.Abstractions;
+using Novia.EngineManagement.Domain.Abstractions;
+using Novia.EngineManagement.Infrastructure.Data.Ef;
+using Novia.EngineManagement.Infrastructure.Data.Ef.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Novia.TypeManagement.Configuration
+namespace Novia.EngineManagement.Configuration
 {
-    using Type = Domain.Entities.Type;
-    using TypeManagement = Application.Services.TypeManagement;
+    using Engine = Domain.Entities.Engine;
+    using EngineManagement = Application.Services.EngineManagement;
 
     static public class ServiceContainerConfigurator
     {
@@ -22,14 +22,14 @@ namespace Novia.TypeManagement.Configuration
 
         static public void ConfigureServices(string connectionString, IServiceCollection services)
         {
-            services.AddDbContext<TypeDbContext>(options =>
+            services.AddDbContext<EngineDbContext>(options =>
             options.UseSqlServer(connectionString))
-            .AddTransient<EfTypeDbContext, TypeDbContext>()
-            .AddTransient<ITypeRepository, TypeRepository>()
-            .AddTransient<ITypeManagement, TypeManagement>()
-            .AddTransient<IType, Type>((context) =>
+            .AddTransient<EfEngineDbContext, EngineDbContext>()
+            .AddTransient<IEngineRepository, EngineRepository>()
+            .AddTransient<IEngineManagement, EngineManagement>()
+            .AddTransient<IEngine, Engine>((context) =>
             {
-                Type entity = Type.CreateType("Empty", -1, -1, -1);
+                Engine entity = Engine.CreateEngine("Empty", -1, -1, -1);
                 return entity;
             });
         }
