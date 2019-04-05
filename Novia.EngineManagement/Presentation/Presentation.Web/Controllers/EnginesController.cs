@@ -45,15 +45,23 @@ namespace Novia.EngineManagement.Presentation.Web.Controllers
         // POST: api/Engines
         [HttpPost]
         [Authorize]
-        public void Post([FromBody] string value)
+        public void Post(EngineDto newEngineDto)
         {
+            mEngineManagement.Add(
+                newEngineDto.Name,
+                newEngineDto.Volume,
+                newEngineDto.Power,
+                newEngineDto.Price
+                );
         }
 
         // PUT: api/Engines/5
         [HttpPut("{id}")]
         [Authorize]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, EngineDto newEngineDto)
         {
+            newEngineDto.Id = id;
+            mEngineManagement.Modify(newEngineDto);
         }
 
         // DELETE: api/ApiWithActions/5
@@ -61,6 +69,7 @@ namespace Novia.EngineManagement.Presentation.Web.Controllers
         [Authorize]
         public void Delete(int id)
         {
+            mEngineManagement.Remove(mEngineManagement.FindById(id));
         }
     }
 }
