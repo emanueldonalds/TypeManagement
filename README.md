@@ -1,5 +1,4 @@
-# Type management
-Manages a type
+# Police station management
 
 ## Apply migrations
 ### Infrastructure\Novia.PoliceStationManagement:
