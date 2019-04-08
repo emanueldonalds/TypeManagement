@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\Application.Abstractions\Novia.PoliceStationManagement.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Application\Application\Novia.PoliceStationManagement.Application.csproj" />
+    <ProjectReference Include="..\..\Domain\Domain\Novia.PoliceStationManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure\Novia.PoliceStationManagement.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
