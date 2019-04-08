@@ -8,21 +8,21 @@ namespace Novia.PoliceStationManagement.Domain.Entities
     public class PoliceStation : Entity, IPoliceStation
     {
         public string Name { get; set; }
-        public int Volume { get; set; }
-        public int Power { get; set; }
-        public double Price { get; set; }
+        public string Address { get; set; }
+        public int Workers { get; set; }
+        public string Chief { get; set; }
 
         public PoliceStation()
         {
             Name = "Empty";
-            Volume = -1;
-            Power = -1;
-            Price = -1;
+            Address = "Empty";
+            Workers = 0;
+            Chief = "Empty";
         }
 
-        static public PoliceStation CreatePoliceStation(string name, int volume, int power, double price)
+        static public PoliceStation CreatePoliceStation(string name, string address, int power, string chief)
         {
-            PoliceStation theNewPoliceStation = new PoliceStation { Name = name, Volume = volume, Power = power, Price = price };
+            PoliceStation theNewPoliceStation = new PoliceStation { Name = name, Address = address, Workers = power, Chief = chief };
             return theNewPoliceStation;
         }
     }

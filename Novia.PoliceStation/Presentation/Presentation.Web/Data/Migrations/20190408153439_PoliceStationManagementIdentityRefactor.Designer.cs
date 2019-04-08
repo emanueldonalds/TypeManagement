@@ -10,7 +10,7 @@ using Novia.PoliceStationManagement.Presentation.Web.Data;
 namespace Novia.PoliceStationManagement.Presentation.Web.Data.Migrations
 {
     [DbContext(typeof(PoliceStationManagementIdentityDbContext))]
-    [Migration("20190408150258_PoliceStationManagementIdentityRefactor")]
+    [Migration("20190408153439_PoliceStationManagementIdentityRefactor")]
     partial class PoliceStationManagementIdentityRefactor
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

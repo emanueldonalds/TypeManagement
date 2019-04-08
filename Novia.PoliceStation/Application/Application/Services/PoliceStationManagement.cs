@@ -19,18 +19,18 @@ namespace Novia.PoliceStationManagement.Application.Services
             mPoliceStationRepository = PoliceStationRepository;
         }
 
-        public PoliceStationDto Add(string name, int volume, int power, double price)
+        public PoliceStationDto Add(string name, string address, int power, string chief)
         {
-            IPoliceStation newPoliceStation = PoliceStation.CreatePoliceStation(name, volume, power, price);
+            IPoliceStation newPoliceStation = PoliceStation.CreatePoliceStation(name, address, power, chief);
             mPoliceStationRepository.Add(newPoliceStation);
 
             PoliceStationDto newPoliceStationDto = new PoliceStationDto
             {
                 Name = newPoliceStation.Name,
                 Id = newPoliceStation.Id,
-                Power = newPoliceStation.Power,
-                Price = newPoliceStation.Price,
-                Volume = newPoliceStation.Volume
+                Workers = newPoliceStation.Workers,
+                Chief = newPoliceStation.Chief,
+                Address = newPoliceStation.Address
             };
 
             return newPoliceStationDto;
@@ -45,9 +45,9 @@ namespace Novia.PoliceStationManagement.Application.Services
                     {
                         Name = entry.Name,
                         Id = entry.Id,
-                        Power = entry.Power,
-                        Price = entry.Price,
-                        Volume = entry.Volume
+                        Workers = entry.Workers,
+                        Chief = entry.Chief,
+                        Address = entry.Address
                     }).ToList();
 
             return thePoliceStationDtos;
@@ -60,9 +60,9 @@ namespace Novia.PoliceStationManagement.Application.Services
             if (thePoliceStationToModify != null)
             {
                 thePoliceStationToModify.Name = thePoliceStation.Name;
-                thePoliceStationToModify.Power = thePoliceStation.Power;
-                thePoliceStationToModify.Volume = thePoliceStation.Volume;
-                thePoliceStationToModify.Price = thePoliceStation.Price;
+                thePoliceStationToModify.Workers = thePoliceStation.Workers;
+                thePoliceStationToModify.Address = thePoliceStation.Address;
+                thePoliceStationToModify.Chief = thePoliceStation.Chief;
 
                 mPoliceStationRepository.Update(thePoliceStationToModify);
                 return true;
@@ -94,9 +94,9 @@ namespace Novia.PoliceStationManagement.Application.Services
                 {
                     Name = thePoliceStation.Name,
                     Id = thePoliceStation.Id,
-                    Power = thePoliceStation.Power,
-                    Price = thePoliceStation.Price,
-                    Volume = thePoliceStation.Volume
+                    Workers = thePoliceStation.Workers,
+                    Chief = thePoliceStation.Chief,
+                    Address = thePoliceStation.Address
                 };
 
                 return thePoliceStationDto;

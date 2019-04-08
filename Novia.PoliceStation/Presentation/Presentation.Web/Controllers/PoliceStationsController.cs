@@ -49,9 +49,9 @@ namespace Novia.PoliceStationManagement.Presentation.Web.Controllers
         {
             mPoliceStationManagement.Add(
                 newPoliceStationDto.Name,
-                newPoliceStationDto.Volume,
-                newPoliceStationDto.Power,
-                newPoliceStationDto.Price
+                newPoliceStationDto.Address,
+                newPoliceStationDto.Workers,
+                newPoliceStationDto.Chief
                 );
         }
 

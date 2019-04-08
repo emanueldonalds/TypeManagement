@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Novia.PoliceStationManagement.Infrastructure.Data.Ef.Migrations
 {
-    public partial class PoliceStationRefactor : Migration
+    public partial class PoliceStationManagementRefactor : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,9 +14,9 @@ namespace Novia.PoliceStationManagement.Infrastructure.Data.Ef.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
-                    Volume = table.Column<int>(nullable: false),
-                    Power = table.Column<int>(nullable: false),
-                    Price = table.Column<double>(nullable: false)
+                    Address = table.Column<string>(nullable: true),
+                    Workers = table.Column<int>(nullable: false),
+                    Chief = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

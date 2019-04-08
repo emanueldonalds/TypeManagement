@@ -50,9 +50,9 @@ namespace Novia.PoliceStationManagement.Presentation.Web.Controllers
             {
                 mPoliceStationManagement.Add(
                     newPoliceStationDto.Name,
-                    newPoliceStationDto.Volume,
-                    newPoliceStationDto.Power,
-                    newPoliceStationDto.Price
+                    newPoliceStationDto.Address,
+                    newPoliceStationDto.Workers,
+                    newPoliceStationDto.Chief
                     );
                 return RedirectToAction(nameof(Index));
             }
@@ -79,7 +79,8 @@ namespace Novia.PoliceStationManagement.Presentation.Web.Controllers
             try
             {
                 mPoliceStationManagement.Modify(thePoliceStationToEditDto);
-                return RedirectToAction(nameof(Index));
+                // I want to return the user to the details page instead of the list page
+                return RedirectToAction(nameof(Details), thePoliceStationToEditDto);
             }
             catch
             {

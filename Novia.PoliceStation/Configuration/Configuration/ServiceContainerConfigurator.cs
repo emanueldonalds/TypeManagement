@@ -29,7 +29,7 @@ namespace Novia.PoliceStationManagement.Configuration
             .AddTransient<IPoliceStationManagement, PoliceStationManagement>()
             .AddTransient<IPoliceStation, PoliceStation>((context) =>
             {
-                PoliceStation entity = PoliceStation.CreatePoliceStation("Empty", -1, -1, -1);
+                PoliceStation entity = PoliceStation.CreatePoliceStation("Empty", "Empty", 0, "Empty");
                 return entity;
             });
         }

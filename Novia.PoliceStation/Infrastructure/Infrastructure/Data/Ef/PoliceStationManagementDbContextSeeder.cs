@@ -20,24 +20,24 @@ namespace Novia.PoliceStationManagement.Infrastructure.Data.Ef
                 // we could also check for some specific instances and behave accordingly to the result.
                 PoliceStation firstPoliceStation = new PoliceStation
                 {
-                    Name = "Honda CR60",
-                    Power = 210,
-                    Volume = 1800,
-                    Price = 8544,
+                    Name = "Vasas Polis",
+                    Workers = 34,
+                    Address = "Wolffskavägen 33",
+                    Chief = "Sauli Niinistö",
                 };
                 PoliceStation SecondPoliceStation = new PoliceStation
                 {
-                    Name = "Nissan XR22",
-                    Power = 340,
-                    Volume = 2200,
-                    Price = 11999,
+                    Name = "Polisen i Åbo",
+                    Workers = 56,
+                    Address = "Åbovägen 5",
+                    Chief = "Lennu",
                 };
                 PoliceStation thirdPoliceStation = new PoliceStation
                 {
-                    Name = "Lamborghini ABCDEFGH",
-                    Power = 550,
-                    Volume = 3500,
-                    Price = 34000,
+                    Name = "Helsingfors Polis",
+                    Workers = 78,
+                    Address = "Helsingforsgatan 422",
+                    Chief = "Carl Gustav",
                 };
 
                 context.PoliceStations.Add(firstPoliceStation);

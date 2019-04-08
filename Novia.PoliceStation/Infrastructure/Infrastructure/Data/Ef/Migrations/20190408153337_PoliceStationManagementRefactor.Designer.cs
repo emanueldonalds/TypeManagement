@@ -9,8 +9,8 @@ using Novia.PoliceStationManagement.Infrastructure.Data.Ef;
 namespace Novia.PoliceStationManagement.Infrastructure.Data.Ef.Migrations
 {
     [DbContext(typeof(PoliceStationManagementDbContext))]
-    [Migration("20190408150132_PoliceStationRefactor")]
-    partial class PoliceStationRefactor
+    [Migration("20190408153337_PoliceStationManagementRefactor")]
+    partial class PoliceStationManagementRefactor
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,13 +26,13 @@ namespace Novia.PoliceStationManagement.Infrastructure.Data.Ef.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Address");
+
+                    b.Property<string>("Chief");
+
                     b.Property<string>("Name");
 
-                    b.Property<int>("Power");
-
-                    b.Property<double>("Price");
-
-                    b.Property<int>("Volume");
+                    b.Property<int>("Workers");
 
                     b.HasKey("Id");
 
