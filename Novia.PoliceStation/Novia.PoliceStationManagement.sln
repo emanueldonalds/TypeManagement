@@ -23,8 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novia.PoliceStationManageme
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novia.PoliceStationManagement.Infrastructure", "Infrastructure\Infrastructure\Novia.PoliceStationManagement.Infrastructure.csproj", "{2C8F4AB6-7D62-4585-BC6E-0EBBF4914C8E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novia.PoliceStationManagement.Presentation.Console", "Presentation\Presentation.Console\Novia.PoliceStationManagement.Presentation.Console.csproj", "{85A20358-2E3C-423A-BDFA-E7D806B60FC7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novia.PoliceStationManagement.Presentation.Web", "Presentation\Presentation.Web\Novia.PoliceStationManagement.Presentation.Web.csproj", "{539C7A96-6B91-411C-90EA-84DBF57E04F2}"
 EndProject
 Global
@@ -53,10 +51,6 @@ Global
 		{2C8F4AB6-7D62-4585-BC6E-0EBBF4914C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C8F4AB6-7D62-4585-BC6E-0EBBF4914C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C8F4AB6-7D62-4585-BC6E-0EBBF4914C8E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{85A20358-2E3C-423A-BDFA-E7D806B60FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85A20358-2E3C-423A-BDFA-E7D806B60FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85A20358-2E3C-423A-BDFA-E7D806B60FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85A20358-2E3C-423A-BDFA-E7D806B60FC7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{539C7A96-6B91-411C-90EA-84DBF57E04F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{539C7A96-6B91-411C-90EA-84DBF57E04F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{539C7A96-6B91-411C-90EA-84DBF57E04F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,7 +65,6 @@ Global
 		{F86047B3-1DA9-4A87-AF33-7BC51C1A2AF0} = {FA1DC396-CA27-4685-AB62-84E3F37CB6E1}
 		{EE0E18E7-7B3F-48DC-9A11-A5306357DC59} = {E69EDBE4-B2E0-4915-BA49-371CA31F5F86}
 		{2C8F4AB6-7D62-4585-BC6E-0EBBF4914C8E} = {7575F561-CACC-474E-B56A-7D7CF822DA64}
-		{85A20358-2E3C-423A-BDFA-E7D806B60FC7} = {C1661617-4FD7-4375-BF38-60B190D3AA02}
 		{539C7A96-6B91-411C-90EA-84DBF57E04F2} = {C1661617-4FD7-4375-BF38-60B190D3AA02}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
