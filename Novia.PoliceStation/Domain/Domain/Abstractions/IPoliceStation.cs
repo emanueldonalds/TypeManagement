@@ -8,7 +8,7 @@ namespace Novia.PoliceStationManagement.Domain.Abstractions
     {
         string Name { get; set; }
         string Address { get; set; }
-        int Workers { get; set; }
+        uint Workers { get; set; }
         string Chief { get; set; }
     }
 }

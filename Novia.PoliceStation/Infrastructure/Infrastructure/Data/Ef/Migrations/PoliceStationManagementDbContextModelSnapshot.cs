@@ -30,7 +30,7 @@ namespace Novia.PoliceStationManagement.Infrastructure.Data.Ef.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("Workers");
+                    b.Property<long>("Workers");
 
                     b.HasKey("Id");
 

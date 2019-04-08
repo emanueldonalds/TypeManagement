@@ -9,7 +9,7 @@ namespace Novia.PoliceStationManagement.Domain.Entities
     {
         public string Name { get; set; }
         public string Address { get; set; }
-        public int Workers { get; set; }
+        public uint Workers { get; set; }
         public string Chief { get; set; }
 
         public PoliceStation()
@@ -20,9 +20,9 @@ namespace Novia.PoliceStationManagement.Domain.Entities
             Chief = "Empty";
         }
 
-        static public PoliceStation CreatePoliceStation(string name, string address, int power, string chief)
+        static public PoliceStation CreatePoliceStation(string name, string address, uint workers, string chief)
         {
-            PoliceStation theNewPoliceStation = new PoliceStation { Name = name, Address = address, Workers = power, Chief = chief };
+            PoliceStation theNewPoliceStation = new PoliceStation { Name = name, Address = address, Workers = workers, Chief = chief };
             return theNewPoliceStation;
         }
     }

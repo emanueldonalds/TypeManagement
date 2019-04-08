@@ -9,7 +9,7 @@ using Novia.PoliceStationManagement.Infrastructure.Data.Ef;
 namespace Novia.PoliceStationManagement.Infrastructure.Data.Ef.Migrations
 {
     [DbContext(typeof(PoliceStationManagementDbContext))]
-    [Migration("20190408153337_PoliceStationManagementRefactor")]
+    [Migration("20190408160320_PoliceStationManagementRefactor")]
     partial class PoliceStationManagementRefactor
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,7 +32,7 @@ namespace Novia.PoliceStationManagement.Infrastructure.Data.Ef.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("Workers");
+                    b.Property<long>("Workers");
 
                     b.HasKey("Id");
 

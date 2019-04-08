@@ -15,7 +15,7 @@ namespace Novia.PoliceStationManagement.Infrastructure.Data.Ef.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
-                    Workers = table.Column<int>(nullable: false),
+                    Workers = table.Column<long>(nullable: false),
                     Chief = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

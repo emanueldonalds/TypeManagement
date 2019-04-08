@@ -7,7 +7,7 @@ namespace Novia.PoliceStationManagement.Application.Abstractions
 {
     public interface IPoliceStationManagement
     {
-        PoliceStationDto Add(string name, string Address, int power, string Chief);
+        PoliceStationDto Add(string name, string Address, uint Workers, string Chief);
         bool Remove(PoliceStationDto thePoliceStation);
         bool Modify(PoliceStationDto thePoliceStation);
         PoliceStationDto FindById(int Id);

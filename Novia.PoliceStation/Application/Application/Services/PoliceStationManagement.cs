@@ -19,9 +19,9 @@ namespace Novia.PoliceStationManagement.Application.Services
             mPoliceStationRepository = PoliceStationRepository;
         }
 
-        public PoliceStationDto Add(string name, string address, int power, string chief)
+        public PoliceStationDto Add(string name, string address, uint workers, string chief)
         {
-            IPoliceStation newPoliceStation = PoliceStation.CreatePoliceStation(name, address, power, chief);
+            IPoliceStation newPoliceStation = PoliceStation.CreatePoliceStation(name, address, workers, chief);
             mPoliceStationRepository.Add(newPoliceStation);
 
             PoliceStationDto newPoliceStationDto = new PoliceStationDto
